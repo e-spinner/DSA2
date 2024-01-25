@@ -1,0 +1,36 @@
+Queue: []
+Enter: [] Exit: []
+
+EnQueue 1
+
+EnQueue 2
+
+EnQueue 3
+
+Queue: [3, 2, 1]
+Enter: [3, 2, 1] Exit: []
+
+DeQueue 1
+
+Queue: [3, 2]
+Enter: [] Exit: [2, 3]
+
+EnQueue 4
+
+EnQueue 5
+
+Queue: [5, 4, 3, 2]
+Enter: [5, 4] Exit: [2, 3]
+
+DeQueue 2
+
+DeQueue 3
+
+EnQueue 6
+
+DeQueue 4
+
+EnQueue 7
+
+Queue: [7, 6, 5]
+Enter: [7] Exit: [5, 6]
