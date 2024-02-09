@@ -12,5 +12,5 @@ graph.add( 'Dallas', 'Chicago', 900)
 graph.add( 'Dallas', 'Denver', 780)
 graph.add( 'Denver', 'Atlanta', 1400)
 graph.add( 'Washington', 'Dallas', 1300)
-# Print the adjacency matrix
+# Print the graph
 graph.print()
