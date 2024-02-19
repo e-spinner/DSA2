@@ -8,6 +8,10 @@ class List( object ):
         for i in range( self.size ):
             self.list[ self.names[i] ] = []
         
+    # Method to get the adjacency list for a city
+    def get_adjacency_list(self, city):
+        return self.list.get(city, [])
+    
     # Method to add a connection between two cities
     def add( self, start, end, weight, isTwoWay=False ):
         # Add the end city and weight to the adjacency list of the start city
