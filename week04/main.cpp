@@ -24,7 +24,7 @@ struct Node {
 struct CompareDistance {
     // Custom comparison for priority queue
     bool operator()(const Node& a, const Node& b) {
-        // Compares distances for priority queue
+        // Compares the distances for priority queue
         return a.distance > b.distance;
     }
 };
@@ -37,20 +37,20 @@ vector<int> dijkstra(vector<vector<pair<int, int>>>& graph, int source, int dest
     priority_queue<Node, vector<Node>, CompareDistance> pq; // Priority queue for Dijkstra's algorithm
 
     dist[source] = 0; // Distance from source to itself is 0
-    pq.push(Node(source, 0)); // Push the source node into priority queue with distance 0
+    pq.push(Node(source, 0)); // Pushes the source node into priority queue with a distance of 0
 
     while (!pq.empty()) { // While priority queue is not empty
         int u = pq.top().vertex; // Get the vertex with minimum distance
         pq.pop(); // Remove the vertex from priority queue
 
-        // Iterate through neighbors of the current vertex
+        // Iterate through the neighbors of the current vertex
         for (auto& neighbor : graph[u]) {
             int v = neighbor.first; // Neighbor vertex
             int weight = neighbor.second; // Weight of edge between current and neighbor vertex
 
             // Relaxation
             if (dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
-                // If relaxation condition satisfied, update distance of neighbor vertex
+                // If relaxation condition is true, update distance of neighbor vertex
                 dist[v] = dist[u] + weight;
                 // store previous vertex in shortest path
                 prev[v] = u;
@@ -77,7 +77,7 @@ int main() {
     cout << "Enter the number of vertices and edges: ";
     cin >> V >> E; // Input number of vertices and edges
 
-    vector<vector<pair<int, int>>> graph(V); // Adjacency list representation of graph
+    vector<vector<pair<int, int>>> graph(V); // Adjacency list representation of the graph
 
     cout << "Enter the edges (source, destination, weight):" << endl;
     for (int i = 0; i < E; ++i) { // Input edges and their weights
