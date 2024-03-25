@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "iostream": "cpp"
     },
     "python.analysis.extraPaths": [
         "./week04"
